@@ -1,0 +1,22 @@
+{
+  "name": "ts-electron",
+  "version": "1.0.0",
+  "description": "Example of an electron based app written with typescript",
+  "repository": "ibqn/ts-electron",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run tsc && concurrently --names \"WATCH,SERVE,ELECTRON\" --prefix-colors \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\"  \"npm run tsc:watch\" \"npm run serve\" \"npm run electron\"",
+    "electron": "electron .",
+    "tsc": "tsc index.ts",
+    "serve": "lite-server",
+    "tsc:watch": "npm run tsc -- --watch"
+  },
+  "author": "bqn",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.5",
+    "lite-server": "^2.2.2",
+    "concurrently": "^3.5.0",
+    "electron": "1.7.5"
+  }
+}
