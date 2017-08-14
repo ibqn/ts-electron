@@ -8,7 +8,8 @@ let win = null;
 const createWindow = () => {
   win = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    show: false
   });
 
   // and load the index.html of the app.
@@ -21,6 +22,9 @@ const createWindow = () => {
   */
 
   win.loadURL("http://localhost:8080/");
+  win.once('ready-to-show', () => {
+    win.show();
+  });
 
   // Open the DevTools.
   win.webContents.openDevTools()
