@@ -1,8 +1,8 @@
 import { app, BrowserWindow } from 'electron';
-/*
+
 import * as url from 'url';
 import * as path from 'path';
-*/
+
 
 let win: Electron.BrowserWindow | null = null;
 
@@ -14,23 +14,20 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  /*
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
+    protocol: 'file',
     slashes: true
   }));
-  */
 
-  win.loadURL("http://localhost:8080/");
+
+  // win.loadURL("http://localhost:8080/");
   win.once('ready-to-show', () => {
     (win as Electron.BrowserWindow).show();
   });
 
   // Open the DevTools.
-  win.webContents.openDevTools()
-
-  //win.show(true);
+  //win.webContents.openDevTools()
 
   win.on('closed', () => {
     win = null;
