@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "pretty": true,
+    "newLine": "LF",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "sourceMap":  true,
+    "rootDir": "./",
+    "typeRoots": [
+      "node_modules/@types/**",
+      "node_modules/electron/**"
+    ]
+  },
+
+  "filesGlob": [
+    "./*.ts"
+  ],
+
+  "exclude": [
+    "node_modules/**",
+    "!node_modules/@types/**",
+    "!node_modules/electron/**"
+  ]
+}

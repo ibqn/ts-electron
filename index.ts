@@ -1,9 +1,10 @@
 import { app, BrowserWindow } from 'electron';
+/*
 import * as url from 'url';
 import * as path from 'path';
+*/
 
-
-let win = null;
+let win: Electron.BrowserWindow | null = null;
 
 const createWindow = () => {
   win = new BrowserWindow({
@@ -23,7 +24,7 @@ const createWindow = () => {
 
   win.loadURL("http://localhost:8080/");
   win.once('ready-to-show', () => {
-    win.show();
+    (win as Electron.BrowserWindow).show();
   });
 
   // Open the DevTools.
